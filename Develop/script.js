@@ -1,21 +1,8 @@
-// Assignment Code
-// Store an array of lowercase chars in a variable
-// store an array of numeric characters in a variable
-// stoer an array of uppercase chars in a variable
-// Store an array of spqcial chars in a variable
-
-// function to promp the user for thier password options
-// viriable to store the length of the password
-// conditiional statement to check if the password length is a true number
-// check to see if the password is atleast 8 chars and not more than 127
-// Need 4 confirms to check what chars user would like to use in the password
-// conditional statement ot check if user does not include anytypes of chars the generation will end
-
-// create and object to store user input
 
 // Assignment of code
 var generateBtn = document.querySelector("#generate");
-
+  // Store an array of lowercase, upper case, numeri, and special characters
+  //create a fuction to geneerate password
 function generatePassword() {
   var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -24,13 +11,15 @@ function generatePassword() {
   var numbers = "0123456789";
 
   var symbols = "!@#$%^&*+";
-
+// Create to promp the user for thier password options
  var length = parseInt(prompt("how long is your password?"));
   var userUpper = confirm("Do you want upper case letters in your password?");
   var userLower = confirm("Do you want lower letters in your password?");
   var userNumbers = confirm("Do you want numbers in your password?");
   var userSymbols = confirm("Do you want symbols in your password?");
 
+
+  // conditiional statements
   var userCharacters = "";
   if (userUpper) {
     userCharacters = userCharacters + upper;
@@ -44,7 +33,8 @@ function generatePassword() {
   if (userSymbols) {
     userCharacters = userCharacters + symbols;
   }
-
+// viriable to store the length of the password
+// create and object to store user input
   var password = "";
   for (var i = 0; i < length; i++) {
     password =
